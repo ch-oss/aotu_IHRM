@@ -6,7 +6,6 @@ from BeautifulReport import BeautifulReport
 from case.test_case import TestIhrm
 
 suite = unittest.TestSuite()
-print("haha")
 
 suite.addTest(unittest.makeSuite(TestIhrm))
 # report_name = time.strftime("%Y%m%d%H%M%S")
