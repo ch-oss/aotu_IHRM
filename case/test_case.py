@@ -48,7 +48,7 @@ class TestIhrm(unittest.TestCase):
         print("查询接口返回的数据:",reponse3.json())
 
         #断言
-        # self.assertIn("操作",reponse3.json().get("message"))
+        self.assertIn("操作",reponse3.json().get("message"))
 
      #更员工信息
     def test_04_put_emp(self):
