@@ -14,8 +14,8 @@ class Ihrm:
         # time_str = time.strftime("%H%M%%s")
         self.login_ihrm(session)
         add_data = {
-                    "username": "d2dss1dsdsffsdff",
-                    "mobile": "17dd1ss1f0ssddffd667",
+                    "username": "d2d1ss31dsdsffsdff",
+                    "mobile": "17dd131ss1f0ssddffd667",
                     "timeOfEntry": "2019-07-01",
                     "formOfEmployment": 1,
                     "workNumber": "1322131",
@@ -34,7 +34,7 @@ class Ihrm:
         # self.emp_id = reponse_emp.json().get("data").get("id")
         # print("emp_id:",self.emp_id)
         #根据新增员工返回的员工id来查询新增员工的信息是否正确
-        return session.get(url="http://182.92.81.159/api/sys/user/"+str(1184764240116142080))
+        return session.get(url="http://182.92.81.159/api/sys/user/"+str(1184776054744895488))
 
     #更新员工信息
     def put_emp(self,session):
@@ -44,7 +44,7 @@ class Ihrm:
 
         #更新信息
         new_emp_data = {"username":"tom-new"}
-        return session.put(url="http://182.92.81.159/api/sys/user/"+str(1184764240116142080),json=new_emp_data)
+        return session.put(url="http://182.92.81.159/api/sys/user/"+str(1184776054744895488),json=new_emp_data)
 
     #删除员工信息
     def del_emp(self,session):
@@ -52,6 +52,6 @@ class Ihrm:
         self.login_ihrm(session)
 
         #删除员工信息
-        return session.delete(url="http://182.92.81.159/api/sys/user/"+str(1184764240116142080))
+        return session.delete(url="http://182.92.81.159/api/sys/user/"+str(1184776054744895488))
 
 
